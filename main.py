@@ -34,10 +34,12 @@ def temp():
             logging.error(f'temperature sensor is unavailable - {error}')
             return
 
+    tc = round(temperature, 2)
     tf = round(9.0 / 5.0 * temperature + 32, 2)
 
     return jsonify({
-        'temp': tf,
+        'temp_f': tf,
+        'temp_c': tc,
         'room': room
     })
 
