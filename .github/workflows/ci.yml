@@ -37,5 +37,6 @@ jobs:
         run: |
           docker rm -f temppi
           docker run -d --pull=always --name temppi -v \
-          config:/app/config --restart=always ghcr.io/truncj/temppi:latest
+          config:/app/config --restart=always -p 3000:3000 \
+          ghcr.io/truncj/temppi:latest
         working-directory: /home/pi/Projects/temppi
