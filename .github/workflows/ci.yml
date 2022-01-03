@@ -35,5 +35,6 @@ jobs:
       -
         name: Deploy
         run: |
-          docker run --pull=always --name temppi -v ./config:/app/config ghcr.io/truncj/temppi:latest
+          docker run --pull=always --name temppi -v \
+          config:/app/config --restart=always ghcr.io/truncj/temppi:latest
         working-directory: /home/pi/Projects/temppi
