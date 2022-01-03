@@ -1,0 +1,13 @@
+accessory.state
+config/config.json
+pyvenv.cfg
+__pycache__/
+.idea/
+.github/
+.DS_Store
+
+**/bin
+**/include
+**/lib
+**/venv
+
